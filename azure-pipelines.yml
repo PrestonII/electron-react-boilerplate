@@ -21,8 +21,7 @@ steps:
   displayName: 'Build & Package App'
   
 - task: CopyFiles@2
-  inputs:
-    SourceFolder: '$(Build.SourcesDirectory)/release'
+  inputs:    
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
