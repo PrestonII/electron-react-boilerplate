@@ -20,10 +20,11 @@ steps:
     yarn package-ci
   displayName: 'Build & Package App'
   
-  inputs:
+- task: CopyFiles@2
+  inputs:    
     Contents: |
       **/*
-      !node_modules/**/*
+      !
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
