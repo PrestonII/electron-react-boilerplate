@@ -16,7 +16,7 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    yarn install --frozen-lockfile
+    yarn install --frozen-lockfile --network-timeout 1000000
     yarn package
   displayName: 'Build & Package App'
   
@@ -26,3 +26,9 @@ steps:
     downloadType: 'specific'
     itemPattern: '**.msi**, **.exe**'
     downloadPath: '$(System.ArtifactsDirectory)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
