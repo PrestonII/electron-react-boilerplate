@@ -17,12 +17,13 @@ steps:
 
 - script: |
     yarn install --frozen-lockfile --network-timeout 1000000
-    yarn package
+    yarn package-ci
   displayName: 'Build & Package App'
   
-- task: CopyFiles@2
-  inputs:    
-    Contents: '**'
+  inputs:
+    Contents: |
+      **/*
+      !node_modules/**/*
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
