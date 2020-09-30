@@ -19,3 +19,10 @@ steps:
     yarn install --frozen-lockfile
     yarn package
   displayName: 'Build & Package App'
+  
+- task: DownloadBuildArtifacts@0
+  inputs:
+    buildType: 'current'
+    downloadType: 'specific'
+    itemPattern: '**.msi**, **.exe**'
+    downloadPath: '$(System.ArtifactsDirectory)'
