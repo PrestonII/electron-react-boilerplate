@@ -16,8 +16,9 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    yarn makeFake
-  displayName: 'Create a fake directory'
+    yarn install --frozen-lockfile --network-timeout 1000000
+    yarn package-ci
+  displayName: 'Build & Package App'
   
 - task: CopyFiles@2
   inputs:    
