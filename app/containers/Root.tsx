@@ -5,6 +5,7 @@ import { hot } from 'react-hot-loader/root';
 import { History } from 'history';
 import { Store } from '../store';
 import Routes from '../Routes';
+import styles from '../styles/styles.app.scss';
 
 type Props = {
   store: Store;
@@ -14,7 +15,9 @@ type Props = {
 const Root = ({ store, history }: Props) => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Routes />
+      <div className={styles.app}>
+        <Routes />
+      </div>
     </ConnectedRouter>
   </Provider>
 );

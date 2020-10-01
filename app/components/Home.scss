@@ -1,8 +1,8 @@
+@import '../styles/styles.placeholders.scss';
+
 .container {
-  // position: absolute;
-  // top: 30%;
-  // left: 10px;
-  // text-align: center;
+  // @extend %full_width_height;
+  border: 1px solid red;
 }
 
 .container h2 {
