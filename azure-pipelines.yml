@@ -20,8 +20,11 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |    
-    yarn install --frozen-lockfile --network-timeout 1000000
-    yarn package-ci
+    yarn install --frozen-lockfile --network-timeout 1000000    
+  displayName: 'Install dependencies'
+
+- script: |
+    yarn package-all
   displayName: 'Build & Package App'
   
 - task: CopyFiles@2
