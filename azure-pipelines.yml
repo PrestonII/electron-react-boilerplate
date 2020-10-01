@@ -10,13 +10,16 @@ pool:
   vmImage: 'windows-2019'
 
 steps:
+
+- script:  yarn makeReleaseDirs
+  displayName: 'Create release directories'
+
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- script: |
-    yarn makeReleaseDirs
+- script: |    
     yarn install --frozen-lockfile --network-timeout 1000000
     yarn package-ci
   displayName: 'Build & Package App'
@@ -26,6 +29,7 @@ steps:
     Contents: |
       **/*
       !node_modules/**/*
+      !.git/**/*
       !.github/**/*
       !.vscode/**/*
       !app/**/*
