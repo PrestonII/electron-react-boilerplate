@@ -3,6 +3,9 @@
  *        See https://github.com/webpack-contrib/sass-loader#imports
  */
 @import '~@fortawesome/fontawesome-free/css/all.css';
+@import '~@blueprintjs/core/lib/css/blueprint.css';
+@import '~@blueprintjs/core/lib/css/blueprint-hi-contrast.css';
+@import '~@blueprintjs/core/lib/scss/variables.scss';
 
 body {
   position: relative;
