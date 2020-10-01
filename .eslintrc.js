@@ -1,8 +1,18 @@
+const RULESTATE = {
+  OFF: 'off',
+  WARN: 'warn',
+};
+
 module.exports = {
   extends: 'erb/typescript',
   rules: {
     // A temporary hack related to IDE not resolving correct package.json
-    'import/no-extraneous-dependencies': 'off',
+    'import/no-extraneous-dependencies': RULESTATE.OFF,
+    'import/prefer-default-export': RULESTATE.OFF,
+    'react/destructuring-assignment': RULESTATE.WARN,
+    'no-return-assign': RULESTATE.WARN,
+    'react/jsx-props-no-spreading': RULESTATE.WARN,
+    'react/no-access-state-in-setstate': RULESTATE.WARN,
   },
   parserOptions: {
     ecmaVersion: 2020,
