@@ -1,0 +1,50 @@
+# Node.js with React
+# Build a Node.js project that uses React.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-2019'
+
+steps:
+
+- script:  yarn makeReleaseDirs
+  displayName: 'Create release directories'
+
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+
+- script: |    
+    yarn install --frozen-lockfile --network-timeout 1000000    
+  displayName: 'Install dependencies'
+
+- script: |
+    yarn package-all
+  displayName: 'Build & Package App'
+  
+- task: CopyFiles@2
+  inputs:    
+    Contents: |
+      **/*
+      !node_modules/**/*
+      !.git/**/*
+      !.github/**/*
+      !.vscode/**/*
+      !app/**/*
+      !configs/**/*
+      !internals/**/*
+      !resources/**/*
+      !test/**/*
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+    
