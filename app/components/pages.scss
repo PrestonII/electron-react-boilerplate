@@ -1,0 +1,10 @@
+.page {
+
+}
+
+.pagePanel {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  border: 1px solid white;
+  width: 100%;
+}

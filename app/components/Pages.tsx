@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import { Panel } from './Panels';
+import styles from './pages.scss';
 
 export const Page = (props: PageProps) => {
   const { children } = props;
@@ -13,7 +14,7 @@ type PageProps = {
 
 export const PageWithPanel = ({ children }: PageProps) => {
   return (
-    <div className="page pagePanel">
+    <div className={styles.pagePanel}>
       <Panel />
       <Page>HOME PAGE</Page>
     </div>

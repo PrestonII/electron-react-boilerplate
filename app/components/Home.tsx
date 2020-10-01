@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import routes from '../constants/routes.json';
-import styles from './Home.css';
+import styles from './Home.scss';
 import Project from '../features/project/project';
 import { PageWithPanel } from './Pages';
 
