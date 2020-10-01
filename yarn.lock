@@ -1212,6 +1212,18 @@
     resize-observer-polyfill "^1.5.1"
     tslib "~1.13.0"
 
+"@blueprintjs/docs-theme@^3.7.2":
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/@blueprintjs/docs-theme/-/docs-theme-3.7.2.tgz#52b1ba6e76d7718b2574549bb49bc2912676fcf6"
+  integrity sha512-8ujCtmb1bEW2kVeiFx36PEXi+6/AByw0MeNmobSeTxXH0UY71J6mrQlunZeJAkb77V2U3KF5Iw6OWmYCmFovOA==
+  dependencies:
+    "@blueprintjs/core" "^3.33.0"
+    "@blueprintjs/select" "^3.14.2"
+    "@documentalist/client" "~2.5.0"
+    classnames "^2.2"
+    fuzzaldrin-plus "^0.6.0"
+    tslib "~1.13.0"
+
 "@blueprintjs/icons@^3.22.0":
   version "3.22.0"
   resolved "https://registry.yarnpkg.com/@blueprintjs/icons/-/icons-3.22.0.tgz#6a7c177e9aa96f0ed10bc93d88f7c6687db336ad"
@@ -1255,6 +1267,11 @@
   dependencies:
     ajv "^6.12.0"
     ajv-keywords "^3.4.1"
+
+"@documentalist/client@~2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@documentalist/client/-/client-2.5.0.tgz#d45ec038a45b4b7a603629ba777ed564fa03c29c"
+  integrity sha512-yOB8X6rU4WZbKsBHQVRw578df6goRi/FveSx9NCcYBkNiM4IqNddpfgX5BrG1hUwO1IVTnMVF5tpFka9oFNSVg==
 
 "@electron/get@^1.0.1":
   version "1.12.2"
@@ -6854,6 +6871,11 @@ functions-have-names@^1.2.0:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/functions-have-names/-/functions-have-names-1.2.1.tgz#a981ac397fa0c9964551402cdc5533d7a4d52f91"
   integrity sha512-j48B/ZI7VKs3sgeI2cZp7WXWmZXu7Iq5pl5/vptV5N2mq+DGFuS/ulaDjtaoLpYzuD6u8UgrUKHfgo7fDTSiBA==
+
+fuzzaldrin-plus@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/fuzzaldrin-plus/-/fuzzaldrin-plus-0.6.0.tgz#832f6489fbe876769459599c914a670ec22947ee"
+  integrity sha1-gy9kifvodnaUWVmckUpnDsIpR+4=
 
 gauge@~2.7.3:
   version "2.7.4"
