@@ -5,7 +5,7 @@ import styles from './pages.scss';
 export const Page = (props: PageProps) => {
   const { children } = props;
 
-  return <div className="page">{children}</div>;
+  return <div className={styles.page}>{children}</div>;
 };
 
 type PageProps = {
