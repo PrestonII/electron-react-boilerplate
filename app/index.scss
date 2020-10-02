@@ -4,12 +4,14 @@
  */
 @import '~@fortawesome/fontawesome-free/css/all.css';
 
-@import '~@blueprintjs/core/lib/css/blueprint.css';
-@import '~@blueprintjs/core/lib/css/blueprint-hi-contrast.css';
-@import '~@blueprintjs/core/lib/scss/variables.scss';
+// @import '~@blueprintjs/core/lib/css/blueprint.css';
+// @import '~@blueprintjs/core/lib/css/blueprint-hi-contrast.css';
+// @import '~@blueprintjs/core/lib/scss/variables.scss';
 
 // @import '~@blueprintjs/icon/lib/css/blueprint-icons.css';
 
-@import '~@blueprintjs/table/lib/css/table.css';
+// @import '~@blueprintjs/table/lib/css/table.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 @import './styles/styles.app.scss';
