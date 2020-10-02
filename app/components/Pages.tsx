@@ -24,7 +24,7 @@ const defaultPanelPageProps = {
 };
 
 type PanelPageProps = {
-  title: string;
+  title?: string;
   children: ReactNode;
 } & typeof defaultPanelPageProps;
 
