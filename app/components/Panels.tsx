@@ -7,7 +7,7 @@ import styles from './panels.scss';
 export const Panel = ({ children }: any) => {
   return (
     <div className={styles.panel}>
-      <div className="content">PANEL</div>
+      <div className="content">Program Dashboard</div>
     </div>
   );
 };
