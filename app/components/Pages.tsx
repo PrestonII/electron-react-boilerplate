@@ -8,15 +8,28 @@ export const Page = (props: PageProps) => {
   return <div className={styles.page}>{children}</div>;
 };
 
+export const PageWithPanel = (props: PanelPageProps) => {
+  const { title, children } = props;
+
+  return (
+    <div className={styles.pagePanel}>
+      <Panel title={title} />
+      <Page>{children}</Page>
+    </div>
+  );
+};
+
+const defaultPanelPageProps = {
+  title: 'Program Dashboard',
+};
+
+type PanelPageProps = {
+  title: string;
+  children: ReactNode;
+} & typeof defaultPanelPageProps;
+
 type PageProps = {
   children: ReactNode;
 };
 
-export const PageWithPanel = ({ children }: PageProps) => {
-  return (
-    <div className={styles.pagePanel}>
-      <Panel />
-      <Page>HOME PAGE</Page>
-    </div>
-  );
-}
+PageWithPanel.defaultProps = defaultPanelPageProps;

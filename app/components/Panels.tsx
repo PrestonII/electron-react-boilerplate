@@ -4,10 +4,16 @@ import { Classes, ITreeNode, Tree } from '@blueprintjs/core';
 
 import styles from './panels.scss';
 
-export const Panel = ({ children }: any) => {
+export const Panel = (props: PanelProps) => {
+  const { title } = props;
+
   return (
     <div className={styles.panel}>
-      <div className="content">Program Dashboard</div>
+      <div className="content">{title}</div>
     </div>
   );
+};
+
+type PanelProps = {
+  title: string;
 };
