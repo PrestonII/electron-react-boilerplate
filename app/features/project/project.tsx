@@ -2,35 +2,22 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Column, Table } from '@blueprintjs/table';
+import { PROJECTS_RECENT } from '../../data/data.home.initial';
 
 export default function ProjectSelection() {
   // const dispatch = useDispatch();
   // const value = useSelector();
 
-  const choicesMain = ['Create New Project', 'Open a Project'];
-  const choicesProjects = [
-    'Google Headquarters',
-    'Urby',
-    'Purell Conneticut Office',
-  ];
+  const recentProjects = PROJECTS_RECENT.list;
 
   return (
     <div className="project">
-      <div className="project__panel">
-        <div className="project__panel__selector">
-          <h1>Program Generator</h1>
-          <div className="selector__options">
-            <p>Create New Project</p>
-            <p>Open Project</p>
-          </div>
-        </div>
-        <div className="project__panel__display">
-          <h4>Recent Projects</h4>
-          <div className="display__options">
-            <Table numRows={choicesProjects.length}>
-              <Column name="Recent Projects" />
-            </Table>
-          </div>
+      <div className="project__display">
+        <h4>Recent Projects</h4>
+        <div className="display__options">
+          <Table numRows={recentProjects.length}>
+            <Column name="Recent Projects" />
+          </Table>
         </div>
       </div>
     </div>

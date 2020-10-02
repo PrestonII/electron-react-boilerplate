@@ -10,8 +10,7 @@ export const HOME_OPTIONS = [
   },
 ];
 
-export const PROJECTS_RECENT = [
-  {
+export const PROJECTS_RECENT = {
     label: 'Recent Projects',
     list: [
       {
@@ -30,5 +29,4 @@ export const PROJECTS_RECENT = [
         dateModified: '08/17/2020'
       },
     ],
-  }
-]
+  };

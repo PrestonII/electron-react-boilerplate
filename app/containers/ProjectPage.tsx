@@ -5,7 +5,7 @@ import { PageWithPanel } from '../components/Pages';
 export default function ProjectPage() {
   return (
     <PageWithPanel>
-      <h2>Home stuff</h2>
+      <Project />
     </PageWithPanel>
   );
 }
