@@ -6,7 +6,8 @@ import { PageWithPanel } from '../components/Pages';
 export default function ProjectPage() {
   return (
     <PageWithPanel>
-      <ProjectExample />
+      <Project />
+      {/* <ProjectExample /> */}
     </PageWithPanel>
   );
 }
