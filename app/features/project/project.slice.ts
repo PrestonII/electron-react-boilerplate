@@ -13,13 +13,13 @@ const projectSlice = createSlice({
       state.dateModified = now;
       console.log(state);
     },
-    openNewProject: (state) => {
+    openProject: (state) => {
       console.log(state);
     },
   },
 });
 
-export const { createNewProject, openNewProject } = projectSlice.actions;
+export const { createNewProject, openProject } = projectSlice.actions;
 
 export default projectSlice.reducer;
 
