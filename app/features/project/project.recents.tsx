@@ -6,11 +6,19 @@ import PROJECTS_RECENT from '../../data/data.project.recents';
 import styles from './project.scss';
 
 export default function ProjectSelection() {
-  // const dispatch = useDispatch();
-  // const value = useSelector();
+  const dispatch = useDispatch();
+  const value = useSelector();
 
   const recent = PROJECT_DATA_RECENTS.map((p) => {
-    return <RecentProjectItem key={p.id} name={p.name} date={p.dateModified} />;
+    return (
+      <RecentProjectItem
+        key={p.id}
+        name={p.name}
+        date={p.dateModified}
+        {...p}
+
+      />
+    );
   });
 
   return (
