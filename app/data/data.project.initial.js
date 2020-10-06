@@ -1,5 +1,7 @@
-export const PROJECT_INITIAL = {
+const INITIAL_PROJECT_DATA = {
   client: '',
+  dateCreated: '',
+  dateModified: '',
   general: {
     units: '',
     tenancy: '',
@@ -155,3 +157,5 @@ export const PROJECT_INITIAL = {
     },
   ],
 };
+
+export default INITIAL_PROJECT_DATA;
