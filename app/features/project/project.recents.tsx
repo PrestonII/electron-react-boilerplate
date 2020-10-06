@@ -1,15 +1,15 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { PROJECTS_RECENT } from '../../data/data.home.initial';
+import PROJECT_DATA_RECENTS from '../../data/data.project.recents';
+import PROJECTS_RECENT from '../../data/data.project.recents';
 import styles from './project.scss';
 
 export default function ProjectSelection() {
   // const dispatch = useDispatch();
   // const value = useSelector();
 
-  const projs = PROJECTS_RECENT.list;
-  const recent = projs.map((p) => {
+  const recent = PROJECT_DATA_RECENTS.map((p) => {
     return <RecentProjectItem key={p.id} name={p.name} date={p.dateModified} />;
   });
 

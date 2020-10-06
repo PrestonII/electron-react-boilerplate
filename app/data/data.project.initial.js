@@ -1,5 +1,6 @@
 const INITIAL_PROJECT_DATA = {
   client: '',
+  name: '',
   dateCreated: '',
   dateModified: '',
   general: {
@@ -23,7 +24,6 @@ const INITIAL_PROJECT_DATA = {
     ratio: '',
   },
   building: {
-    name: '',
     enclosed_offices: [
       {
         name: '',
