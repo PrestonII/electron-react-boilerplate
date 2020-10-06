@@ -1,9 +1,11 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 import styles from './project.panel.scss';
 import { Panel } from '../../components/Panels';
 import { createNewProject, openProject } from './project.slice';
+import routes from '../../constants/routes.json';
 
 export const ProjectOpenPanel = () => <Panel content={<OpenOptions />} />;
 
@@ -19,7 +21,9 @@ function OpenOptions() {
           dispatch(createNewProject());
         }}
       >
-        <h1>Create New</h1>
+        <Link to={routes.COUNTER}>
+          <h1>Create New</h1>
+        </Link>
       </Button>
       <Button
         className={styles.button__project}
