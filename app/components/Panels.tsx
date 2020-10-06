@@ -3,7 +3,8 @@ import styles from './panels.scss';
 
 export interface IPanelContent {
   title: string;
-  content: [];
+  // content: Array<JSX.Element>;
+  content: Array<JSX.Element>;
 }
 
 export class Panel extends React.Component<IPanelContent> {
