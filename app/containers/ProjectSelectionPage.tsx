@@ -1,44 +1,18 @@
 /* disable eslint */
 import React from 'react';
-import { Button } from '@material-ui/core';
-import ProjectSelector from '../features/project/projectSelector';
-import ProjectExample from '../features/project/projectSelector.example';
+
+import { ProjectOpenPanel } from '../features/project/project.panel';
+import RecentProjects from '../features/project/project.recents';
 import { PageWithPanel } from '../components/Pages';
-import styles from './style.selection.scss';
-import { Panel } from '../components/Panels';
+
 
 export default function ProjectSelectionPage() {
   return (
-    <PageWithPanel panel={<OpeningPanel />}>
-      <ProjectSelector />
+    <PageWithPanel panel={<ProjectOpenPanel />}>
+      <RecentProjects />
       {/* <ProjectExample /> */}
     </PageWithPanel>
   );
 }
 
-const OpeningPanel = () => <Panel content={<OpenOptions />} />;
 
-function OpenOptions() {
-  return (
-    <div className="open__options">
-      <Button
-        className={styles.button__project}
-        key="new"
-        onClick={() => {
-          alert('Creating new project');
-        }}
-      >
-        <h1>Create New</h1>
-      </Button>
-      <Button
-        className={styles.button__project}
-        key="open"
-        onClick={() => {
-          alert('Open a project');
-        }}
-      >
-        <h1>Open Project</h1>
-      </Button>
-    </div>
-  );
-}
