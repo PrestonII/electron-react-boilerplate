@@ -1,10 +1,7 @@
 import * as React from 'react';
-
-import { Classes, ITreeNode, Tree } from '@blueprintjs/core';
-
 import styles from './panels.scss';
 
-export const Panel = (props: PanelProps) => {
+export const Panel = (props: IPanelContent) => {
   const { title } = props;
 
   return (
@@ -14,6 +11,11 @@ export const Panel = (props: PanelProps) => {
   );
 };
 
-type PanelProps = {
+export interface IPanelContent {
   title: string;
+  content: Array<any>;
+} & typeof defaultPanelPageProps;
+
+const defaultPanelPageProps = {
+  title: 'Program Dashboard',
 };

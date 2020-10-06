@@ -1,35 +1,32 @@
 import React, { ReactNode } from 'react';
-import { Panel } from './Panels';
+import { Panel, IPanelContent } from './Panels';
 import styles from './pages.scss';
 
-export const Page = (props: PageProps) => {
+export const Page = (props: IPageContent) => {
   const { children } = props;
 
   return <div className={styles.page}>{children}</div>;
 };
 
 export const PageWithPanel = (props: PanelPageProps) => {
-  const { title, children } = props;
+  const { panelContent, pageContent } = props;
+
+  const { title } = panelContent;
+  const panelInfo = panelContent.content.map((i, x) => <p key={x + 1}>{i}</p>);
 
   return (
     <div className={styles.pagePanel}>
-      <Panel title={title} />
-      <Page>{children}</Page>
+      <Panel title={title} content={panelInfo} />
+      <Page>{pageContent}</Page>
     </div>
   );
 };
 
-const defaultPanelPageProps = {
-  title: 'Program Dashboard',
-};
-
 type PanelPageProps = {
-  title?: string;
-  children: ReactNode;
-} & typeof defaultPanelPageProps;
-
-type PageProps = {
-  children: ReactNode;
+  panelContent: IPanelContent;
+  pageContent: IPageContent;
 };
 
-PageWithPanel.defaultProps = defaultPanelPageProps;
+type IPageContent = {
+  children: ReactNode;
+};
