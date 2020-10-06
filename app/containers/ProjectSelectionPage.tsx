@@ -1,8 +1,8 @@
 /* disable eslint */
 import React from 'react';
 import { Button } from '@material-ui/core';
-import ProjectSelector from '../features/projectSelector/projectSelector';
-import ProjectExample from '../features/projectSelector/projectSelector.example';
+import ProjectSelector from '../features/project/projectSelector';
+import ProjectExample from '../features/project/projectSelector.example';
 import { PageWithPanel } from '../components/Pages';
 import styles from './style.selection.scss';
 import { Panel } from '../components/Panels';
