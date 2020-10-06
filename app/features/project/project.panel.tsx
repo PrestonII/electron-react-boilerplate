@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@material-ui/core';
-import styles from './style.selection.scss';
+import styles from './project.panel.scss';
 import { Panel } from '../../components/Panels';
 
 export const ProjectOpenPanel = () => <Panel content={<OpenOptions />} />;
