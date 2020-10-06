@@ -13,6 +13,9 @@ module.exports = {
     'no-return-assign': RULESTATE.WARN,
     'react/jsx-props-no-spreading': RULESTATE.WARN,
     'react/no-access-state-in-setstate': RULESTATE.WARN,
+    'react/prefer-stateless-function': RULESTATE.WARN,
+    'react/static-property-placement': RULESTATE.OFF,
+    'prettier/prettier': RULESTATE.WARN,
   },
   parserOptions: {
     ecmaVersion: 2020,

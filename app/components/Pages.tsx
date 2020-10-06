@@ -1,35 +1,39 @@
 import React, { ReactNode } from 'react';
-import { Panel } from './Panels';
+import { Panel, IPanelContent } from './Panels';
 import styles from './pages.scss';
 
-export const Page = (props: PageProps) => {
+export const Page = (props: IPageContent) => {
   const { children } = props;
 
   return <div className={styles.page}>{children}</div>;
 };
 
-export const PageWithPanel = (props: PanelPageProps) => {
-  const { title, children } = props;
-
-  return (
-    <div className={styles.pagePanel}>
-      <Panel title={title} />
-      <Page>{children}</Page>
-    </div>
-  );
-};
-
-const defaultPanelPageProps = {
-  title: 'Program Dashboard',
-};
-
-type PanelPageProps = {
-  title?: string;
-  children: ReactNode;
-} & typeof defaultPanelPageProps;
-
-type PageProps = {
+type IPageContent = {
   children: ReactNode;
 };
 
-PageWithPanel.defaultProps = defaultPanelPageProps;
+export class PageWithPanel extends React.Component<IPanelPageProps> {
+  constructor(props: IPanelPageProps) {
+    super(props);
+    console.log('Creating a page with a panel');
+  }
+
+  render() {
+    const { panelContent, children } = this.props;
+
+    const { title } = panelContent;
+    const panelInfo = panelContent.content.map((i) => <p>{i}</p>);
+
+    return (
+      <div className={styles.pagePanel}>
+        <Panel title={title} content={panelInfo} />
+        <Page>{children}</Page>
+      </div>
+    )
+  }
+}
+
+interface IPanelPageProps {
+  panelContent: IPanelContent;
+  children: IPageContent;
+};
