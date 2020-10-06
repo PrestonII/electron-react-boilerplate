@@ -23,7 +23,7 @@ export default function ProjectSelectionPage() {
         className={styles.button__project}
         key="open"
         onClick={() => {
-        alert('Open a project');
+          alert('Open a project');
         }}
       >
         <h1>Open Project</h1>

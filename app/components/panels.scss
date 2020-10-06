@@ -8,4 +8,9 @@
   font-style: normal;
   font-size: 7.2rem;
   line-height: 86px;
+  min-width: 40rem;
+
+  &__content {
+    margin-top: 10rem;
+  }
 }
