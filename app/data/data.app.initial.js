@@ -21,6 +21,86 @@ export const APPDATA_INITIAL = {
       total_workseats: '',
       ratio: '',
     },
+    building: {
+      name: '',
+      enclosed_offices: [
+        {
+          name: '',
+          seats: '',
+          ratio: '',
+          area: '',
+          qty_selected: '',
+          seats_total: '',
+          area_total: '',
+        },
+      ],
+      open_plan_workspaces: [
+        {
+          name: '',
+          seats: '',
+          ratio: '',
+          area: '',
+          qty_selected: '',
+          seats_total: '',
+          area_total: '',
+        },
+      ],
+      meeting_spaces: [
+        {
+          name: '',
+          seats: '',
+          ratio: '',
+          area: '',
+          qty_selected: '',
+          seats_total: '',
+          area_total: '',
+        },
+      ],
+      amenity_spaces: [
+        {
+          name: '',
+          seats: '',
+          ratio: '',
+          area: '',
+          qty_selected: '',
+          seats_total: '',
+          area_total: '',
+        },
+      ],
+      support_spaces: [
+        {
+          name: '',
+          seats: '',
+          ratio: '',
+          area: '',
+          qty_selected: '',
+          seats_total: '',
+          area_total: '',
+        },
+      ],
+      broadcast_spaces: [
+        {
+          name: '',
+          seats: '',
+          ratio: '',
+          area: '',
+          qty_selected: '',
+          seats_total: '',
+          area_total: '',
+        },
+      ],
+      lab_spaces: [
+        {
+          name: '',
+          seats: '',
+          ratio: '',
+          area: '',
+          qty_selected: '',
+          seats_total: '',
+          area_total: '',
+        },
+      ],
+    },
     floors: [
       {
         name: '',
@@ -59,7 +139,21 @@ export const APPDATA_INITIAL = {
           seats_total: '',
           area_total: '',
         },
-      }
-    ]
+        broadcast_spaces: {
+          seats: '',
+          area: '',
+          qty_selected: '',
+          seats_total: '',
+          area_total: '',
+        },
+        lab_spaces: {
+          seats: '',
+          area: '',
+          qty_selected: '',
+          seats_total: '',
+          area_total: '',
+        },
+      },
+    ],
   },
 };
