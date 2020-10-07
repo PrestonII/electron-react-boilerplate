@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, TextField } from '@material-ui/core';
 import styles from './styles.building.info.scss';
+import ToggleButton from '../../components/ToggableButton';
 
 function BuildingInformation() {
   return (
@@ -26,12 +27,8 @@ function BuildingInformation() {
               should we use to measure your space?
             </p>
             <div className={styles.page__content__question__answers}>
-              <Button variant="outlined">
-                Imperial
-              </Button>
-              <Button variant="outlined">
-                Metric
-              </Button>
+              <ToggleButton content='Imperial' />
+              <ToggleButton content='Metric' />
             </div>
           </div>
 
