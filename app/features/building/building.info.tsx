@@ -69,14 +69,22 @@ function BuildingInformation() {
           </div>
         </div>
 
-        <div className="page__navigation">
-          <Button variant="outlined">
+        <div className={styles.page__navigation}>
+
+          <div className={styles.page__naviation__left}>
+            <Button variant="outlined">
             Back
-          </Button>
-          <Button variant="outlined">
+            </Button>
+          </div>
+
+          <div className={styles.page__naviation__right}>
+            <Button variant="outlined">
             Next
-          </Button>
+            </Button>
+          </div>
+
         </div>
+
       </div>
     </>
   );
