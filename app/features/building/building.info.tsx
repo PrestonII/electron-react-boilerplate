@@ -6,80 +6,74 @@ function BuildingInformation() {
   return (
     <>
       <div className={styles.page}>
+
         <div className={styles.page__title}>
-          <h2>General Building Information</h2>
+          <h2>General Space Information</h2>
         </div>
-        <div className="page__content">
+
+        <div className={styles.page__content__fill}>
           <div className="page__content__question1">
             <p>What's your client's name</p>
-            <TextField id="standard-basic" label="Client Name" />
+            <div className={styles.page__content__question__answers}>
+              <TextField className="standardBasic" id="standard-basic" label="Client Name" />
+            </div>
           </div>
-          <div className="page__content__question">
+
+          <div className={styles.page__content__question}>
             <p>
               Which
               <em> units </em>
               should we use to measure your space?
             </p>
-            <div className="page__content__question__answers">
-              <Button variant="outlined" color="secondary">
+            <div className={styles.page__content__question__answers}>
+              <Button variant="outlined">
                 Imperial
               </Button>
-              <Button variant="outlined" color="secondary">
+              <Button variant="outlined">
                 Metric
               </Button>
             </div>
           </div>
+
           <div className="page__content__question">
             <p>
-              Which
-              <em> units </em>
-              should we use to measure your space?
+              Is your space a
+              <em> multi-tenant </em>
+              or
+              <em> single-tenant? </em>
             </p>
-            <div className="page__content__question__answers">
-              <Button variant="outlined" color="secondary">
-                Imperial
+            <div className={styles.page__content__question__answers}>
+              <Button variant="outlined">
+                Single
               </Button>
-              <Button variant="outlined" color="secondary">
-                Metric
+              <Button variant="outlined">
+                Multi
               </Button>
             </div>
           </div>
+
           <div className="page__content__question">
             <p>
-              Which
-              <em> units </em>
-              should we use to measure your space?
+              Is this space a
+              <em> broadcast </em>
+              studio?
             </p>
-            <div className="page__content__question__answers">
-              <Button variant="outlined" color="secondary">
-                Imperial
+            <div className={styles.page__content__question__answers}>
+              <Button variant="outlined">
+                Yes
               </Button>
-              <Button variant="outlined" color="secondary">
-                Metric
-              </Button>
-            </div>
-          </div>
-          <div className="page__content__question">
-            <p>
-              Which
-              <em> units </em>
-              should we use to measure your space?
-            </p>
-            <div className="page__content__question__answers">
-              <Button variant="outlined" color="secondary">
-                Imperial
-              </Button>
-              <Button variant="outlined" color="secondary">
-                Metric
+              <Button variant="outlined">
+                No
               </Button>
             </div>
           </div>
         </div>
+
         <div className="page__navigation">
-          <Button variant="outlined" color="secondary">
+          <Button variant="outlined">
             Back
           </Button>
-          <Button variant="outlined" color="secondary">
+          <Button variant="outlined">
             Next
           </Button>
         </div>
