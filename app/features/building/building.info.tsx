@@ -14,13 +14,13 @@ function BuildingInformation() {
             <p>What's your client's name</p>
             <TextField id="standard-basic" label="Client Name" />
           </div>
-          <div className="page__content__question2">
+          <div className="page__content__question">
             <p>
               Which
               <em> units </em>
               should we use to measure your space?
             </p>
-            <div className="page__content__question2__answers">
+            <div className="page__content__question__answers">
               <Button variant="outlined" color="secondary">
                 Imperial
               </Button>
@@ -29,9 +29,51 @@ function BuildingInformation() {
               </Button>
             </div>
           </div>
-          <div className="page__content__question3" />
-          <div className="page__content__question4" />
-          <div className="page__content__question5" />
+          <div className="page__content__question">
+            <p>
+              Which
+              <em> units </em>
+              should we use to measure your space?
+            </p>
+            <div className="page__content__question__answers">
+              <Button variant="outlined" color="secondary">
+                Imperial
+              </Button>
+              <Button variant="outlined" color="secondary">
+                Metric
+              </Button>
+            </div>
+          </div>
+          <div className="page__content__question">
+            <p>
+              Which
+              <em> units </em>
+              should we use to measure your space?
+            </p>
+            <div className="page__content__question__answers">
+              <Button variant="outlined" color="secondary">
+                Imperial
+              </Button>
+              <Button variant="outlined" color="secondary">
+                Metric
+              </Button>
+            </div>
+          </div>
+          <div className="page__content__question">
+            <p>
+              Which
+              <em> units </em>
+              should we use to measure your space?
+            </p>
+            <div className="page__content__question__answers">
+              <Button variant="outlined" color="secondary">
+                Imperial
+              </Button>
+              <Button variant="outlined" color="secondary">
+                Metric
+              </Button>
+            </div>
+          </div>
         </div>
         <div className="page__navigation">
           <Button variant="outlined" color="secondary">
