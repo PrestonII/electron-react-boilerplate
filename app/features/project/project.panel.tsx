@@ -11,6 +11,11 @@ export const ProjectOpenPanel = () => <Panel content={<OpenOptions />} />;
 
 function OpenOptions() {
   const dispatch = useDispatch();
+  const projectDetails = {
+    id: 94615,
+    name: 'The Project name',
+    dateModified: Date.now(),
+  };
 
   return (
     <div className="open__options">
@@ -29,7 +34,7 @@ function OpenOptions() {
         className={styles.button__project}
         key="open"
         onClick={() => {
-          dispatch(openProject());
+          dispatch(openProject({ payload: projectDetails }));
         }}
       >
         <h1>Open Project</h1>

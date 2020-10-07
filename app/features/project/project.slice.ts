@@ -13,8 +13,9 @@ const projectSlice = createSlice({
       state.dateModified = now;
       console.log(state);
     },
-    openProject: (state) => {
+    openProject: (state, action) => {
       console.log(state);
+      console.log(action);
     },
   },
 });
