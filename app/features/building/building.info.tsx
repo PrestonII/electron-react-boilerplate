@@ -2,12 +2,20 @@ import React from 'react';
 import { Button, TextField } from '@material-ui/core';
 import styles from './styles.building.info.scss';
 import ToggleButton from '../../components/ToggableButton';
+import QnA from '../../components/Question';
 
 function BuildingInformation() {
+  const Q1 = (
+    <p>
+      Which
+      <em> units </em>
+      should we use to measure your space?
+    </p>
+  );
+
   return (
     <>
       <div className={styles.page}>
-
         <div className={styles.page__title}>
           <h2>General Space Information</h2>
         </div>
@@ -16,11 +24,22 @@ function BuildingInformation() {
           <div className={styles.page__content__question}>
             <p>What's your client's name</p>
             <div className={styles.page__content__question__textbox}>
-              <TextField className={styles.page__content__question__textbox__standard} id="standard-basic" label="Client Name" />
+              <TextField
+                className={styles.page__content__question__textbox__standard}
+                id="standard-basic"
+                label="Client Name"
+              />
             </div>
           </div>
 
-          <div className={styles.page__content__question}>
+          <QnA
+            question={Q1}
+            answers={[
+              <ToggleButton content="Imperial" />,
+              <ToggleButton content="Metric" />,
+            ]}
+          />
+          {/* <div className={styles.page__content__question}>
             <p>
               Which
               <em> units </em>
@@ -30,7 +49,7 @@ function BuildingInformation() {
               <ToggleButton content='Imperial' />
               <ToggleButton content='Metric' />
             </div>
-          </div>
+          </div> */}
 
           <div className="page__content__question">
             <p>
@@ -40,48 +59,33 @@ function BuildingInformation() {
               <em> single-tenant? </em>
             </p>
             <div className={styles.page__content__question__answers}>
-              <Button variant="outlined">
-                Single
-              </Button>
-              <Button variant="outlined">
-                Multi
-              </Button>
+              <Button variant="outlined">Single</Button>
+              <Button variant="outlined">Multi</Button>
             </div>
           </div>
 
           <div className="page__content__question">
             <p>
               Is this space a
-              <em> broadcast </em>
+<em> broadcast </em>
               studio?
             </p>
             <div className={styles.page__content__question__answers}>
-              <Button variant="outlined">
-                Yes
-              </Button>
-              <Button variant="outlined">
-                No
-              </Button>
+              <Button variant="outlined">Yes</Button>
+              <Button variant="outlined">No</Button>
             </div>
           </div>
         </div>
 
         <div className={styles.page__navigation}>
-
           <div className={styles.page__naviation__left}>
-            <Button variant="outlined">
-            Back
-            </Button>
+            <Button variant="outlined">Back</Button>
           </div>
 
           <div className={styles.page__naviation__right}>
-            <Button variant="outlined">
-            Next
-            </Button>
+            <Button variant="outlined">Next</Button>
           </div>
-
         </div>
-
       </div>
     </>
   );
