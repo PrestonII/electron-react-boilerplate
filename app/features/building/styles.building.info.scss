@@ -1,0 +1,12 @@
+@import '../../styles/styles.colors.scss';
+
+.page {
+  background-color: $white;
+  color: $blue;
+
+  .page__title {
+    h2 {
+      color: $blue;
+    }
+  }
+}
