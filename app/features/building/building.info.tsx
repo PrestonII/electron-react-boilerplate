@@ -12,10 +12,10 @@ function BuildingInformation() {
         </div>
 
         <div className={styles.page__content__fill}>
-          <div className="page__content__question1">
+          <div className={styles.page__content__question}>
             <p>What's your client's name</p>
-            <div className={styles.page__content__question__answers}>
-              <TextField className="standardBasic" id="standard-basic" label="Client Name" />
+            <div className={styles.page__content__question__textbox}>
+              <TextField className={styles.page__content__question__textbox__standard} id="standard-basic" label="Client Name" />
             </div>
           </div>
 
