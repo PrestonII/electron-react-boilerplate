@@ -1,4 +1,4 @@
-export const APPDATA_INITIAL = {
+const APPDATA_INITIAL = {
   user: {
     name: '',
     email: '',
@@ -31,3 +31,5 @@ export const APPDATA_INITIAL = {
   },
   settings: [],
 };
+
+export default APPDATA_INITIAL;
