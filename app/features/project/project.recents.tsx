@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import APPDATA from '../../data/data.app.initial';
 import styles from './project.scss';
 import { openProject } from './project.slice';
+import { NamedValue } from '../../components/NamedValue';
 
 export default function ProjectSelection() {
   const dispatch = useDispatch();
@@ -11,14 +12,7 @@ export default function ProjectSelection() {
 
   const recentProjects = APPDATA.projects.recent;
   const recent = recentProjects.map((p) => {
-    return (
-      <RecentProjectItem
-        key={p.id}
-        // name={p.name}
-        date={p.dateModified}
-        {...p}
-      />
-    );
+    return <RecentProjectItem key={p.id} date={p.dateModified} {...p} />;
   });
 
   return (
@@ -40,20 +34,4 @@ const RecentProjectItem = (props: ProjectItemProps) => {
   const { name, date } = props;
 
   return <NamedValue name={name} value={date} />;
-};
-
-const NamedValue = (props: NamedValueProps) => {
-  const { name, value } = props;
-
-  return (
-    <div className="data">
-      <p className="data__name">{name}</p>
-      <p className="data__value">{value}</p>
-    </div>
-  );
-};
-
-type NamedValueProps = {
-  name: string;
-  value: string;
 };
