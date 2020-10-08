@@ -5,6 +5,7 @@ import { Button } from '@material-ui/core';
 import styles from './project.panel.scss';
 import { Panel } from '../../components/Panels';
 import { createNewProject, openProject } from './project.slice';
+import { InternalNavigationalButton } from '../../components/NavigationalButtons';
 import routes from '../../constants/routes.json';
 
 export const ProjectOpenPanel = () => <Panel content={<OpenOptions />} />;
@@ -19,27 +20,19 @@ function OpenOptions() {
 
   return (
     <div className="open__options">
-      <Button
+      <InternalNavigationalButton
         className={styles.button__project}
-        key="new"
-        onClick={() => {
-          dispatch(createNewProject());
-        }}
-        // href={routes.PROJECT}
-      >
-        <Link to={routes.PROJECT}>
-          <h1>Create New</h1>
-        </Link>
-      </Button>
-      <Button
+        content="Create New"
+        to={routes.PROJECT}
+        execute={createNewProject}
+      />
+      <InternalNavigationalButton
         className={styles.button__project}
-        key="open"
-        onClick={() => {
-          dispatch(openProject(projectDetails));
-        }}
-      >
-        <h1>Open Project</h1>
-      </Button>
+        content="Open Project"
+        to={routes.PROJECT}
+        execute={openProject}
+        executableData={projectDetails}
+      />
     </div>
   );
 }
