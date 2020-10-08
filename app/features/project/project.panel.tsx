@@ -26,7 +26,7 @@ function OpenOptions() {
           dispatch(createNewProject());
         }}
       >
-        <Link to={routes.COUNTER}>
+        <Link to={routes.PROJECT}>
           <h1>Create New</h1>
         </Link>
       </Button>
