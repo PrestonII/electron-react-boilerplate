@@ -48,7 +48,13 @@
         border: 2px solid $blue;
         margin-right: 10rem;
         float: right;
+        border-radius: 0px;
+        background-color: white;
+      }
 
+      button:focus {
+        background-color: $blue;
+        color: white;
       }
     }
   }
