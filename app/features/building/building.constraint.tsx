@@ -50,17 +50,25 @@ function BuildingConstraint () {
           ]}
         />
 
+        <div>
+          -
+        </div>
+
         <QnA
           question={Q2}
           answers={[
-            <TextInputBox content="Enter the total area of the space"/>
+            <TextInputBox content="Enter the target area per workseat"/>
           ]}
         />
+
+        <div>
+          -
+        </div>
 
         <QnA
           question={Q3}
           answers={[
-            <TextInputBox content="Enter the total area of the space"/>
+            <TextInputBox content="Enter the amount of floors"/>
           ]}
         />
       </div>
