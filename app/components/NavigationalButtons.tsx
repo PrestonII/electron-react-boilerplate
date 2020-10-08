@@ -16,8 +16,14 @@ function InternalNavigationalButton({
       <Link to={to}>{content}</Link>
     </Button>
   ) : (
-    <Button>
-      <Link to={to}>{content}</Link>
+    <DirectionalButton location={to} content={content} />
+  );
+}
+
+export function DirectionalButton({ location, content }: IDirectionalButton) {
+  return (
+    <Button variant='outlined'>
+      <Link to={location}>{content}</Link>
     </Button>
   );
 }
@@ -25,7 +31,11 @@ function InternalNavigationalButton({
 export function BackButton() {
   const history = useHistory();
 
-  return <Button onClick={() => history.goBack()}>Back</Button>;
+  return (
+    <Button variant="outlined" onClick={() => history.goBack()}>
+      Back
+    </Button>
+  );
 }
 
 export type InternalNavBtnProps = {
@@ -34,5 +44,10 @@ export type InternalNavBtnProps = {
   executableData?: Record<string, unknown>;
   to: string;
 };
+
+export interface IDirectionalButton {
+  content: string;
+  location: string;
+}
 
 export { InternalNavigationalButton };
