@@ -4,6 +4,8 @@ import { Switch, Route } from 'react-router-dom';
 import routes from './constants/routes.json';
 import App from './containers/App';
 import HomePage from './containers/HomePage';
+// import BuildingInfoPage from './containers/BuildingInformationPage';
+import { ProjectTransitionPage } from './containers/ProjectTransitionPage';
 
 // Lazily load routes and code split with webpack
 const LazyCounterPage = React.lazy(() =>
@@ -16,11 +18,17 @@ const CounterPage = (props: Record<string, any>) => (
   </React.Suspense>
 );
 
+/*
+  MAKE SURE TO ONLY ADD ROUTES **BEFORE** THE HOME ROUTE
+  OTHERWISE THE HOME ROUTE WILL BE PICKED FIRST
+*/
 export default function Routes() {
   return (
     <App>
       <Switch>
         <Route path={routes.COUNTER} component={CounterPage} />
+        {/* <Route path={routes.PROJECT} component={BuildingInfoPage} /> */}
+        <Route path={routes.PROJECT} component={ProjectTransitionPage} />
         <Route path={routes.HOME} component={HomePage} />
       </Switch>
     </App>

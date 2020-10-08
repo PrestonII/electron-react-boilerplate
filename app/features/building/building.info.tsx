@@ -1,5 +1,7 @@
+import React from 'react';
+
 function BuildingInformation() {
-  return null;
+  return <h2>Building Info</h2>;
 }
 
 export default BuildingInformation;
