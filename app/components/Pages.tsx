@@ -21,20 +21,16 @@ export class PageWithPanel extends React.Component<IPanelPageProps> {
   render() {
     const { panel, children } = this.props;
 
-    // const { title } = panel;
-    // const panelInfo = panel.content.map((c, i) => <p key={i}>{c}</p>);
-
     return (
       <div className={styles.pagePanel}>
-        {/* <Panel title={title} content={panelInfo} /> */}
-        { panel }
+        {panel}
         <Page>{children}</Page>
       </div>
-    )
+    );
   }
 }
 
-interface IPanelPageProps {
-  panel: Panel;
-  children: IPageContent;
+export interface IPanelPageProps {
+  panel?: Panel;
+  children: ReactNode;
 }
