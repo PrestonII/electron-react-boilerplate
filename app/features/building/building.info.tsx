@@ -40,47 +40,50 @@ function BuildingInformation() {
 
   return (
     <div className={styles.page}>
+      <div className={styles.page__logo}> <h2>HLW</h2> </div>
       <div className={styles.page__title}>
         <h2>General Space Information</h2>
       </div>
+      <div className={styles.page__content}>
+        <QnA
+          question={Q1}
+          answers={[
+            <TextInputBox className={styles.textinputbox} content="Please Tell Us Your Client's Name" />
+          ]}
+        />
 
-      <QnA
-        question={Q1}
-        answers={[
-          <TextInputBox className={styles.textinputbox} content="Please Tell Us Your Client's Name" />
-        ]}
-      />
+        <QnA
+          question={Q2}
+          answers={[
+            <ToggleButton content="Imperial" />,
+            <ToggleButton content="Metric" />,
+          ]}
+        />
 
-      <QnA
-        question={Q2}
-        answers={[
-          <ToggleButton content="Imperial" />,
-          <ToggleButton content="Metric" />,
-        ]}
-      />
+        <QnA
+          question={Q3}
+          answers={[
+            <ToggleButton content="Single" />,
+            <ToggleButton content="Multi" />,
+          ]}
+        />
 
-      <QnA
-        question={Q3}
-        answers={[
-          <ToggleButton content="Single" />,
-          <ToggleButton content="Multi" />,
-        ]}
-      />
-
-      <QnA
-        question={Q4}
-        answers={[
-          <ToggleButton content="Yes" />,
-          <ToggleButton content="No" />,
-        ]}
-      />
-
-      <QnA
-        answers={[
-          <ToggleButton content="Next" />,
-          <ToggleButton content="Back" />,
-        ]}
-      />
+        <QnA
+          question={Q4}
+          answers={[
+            <ToggleButton content="Yes" />,
+            <ToggleButton content="No" />,
+          ]}
+        />
+      </div>
+      <div className={styles.page__navigation}>
+        <QnA
+          answers={[
+            <ToggleButton content="Yes" />,
+            <ToggleButton content="No" />,
+          ]}
+        />
+      </div>
     </div>
   );
 }
