@@ -22,6 +22,11 @@ function InternalNavigationalButton({
   );
 }
 
+// export function BackButton() {
+
+//   return <InternalNavigationalButton content='Back' to={}/>
+// }
+
 export type InternalNavBtnProps = {
   content: string;
   execute?: Function;

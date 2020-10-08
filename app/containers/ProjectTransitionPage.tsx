@@ -14,6 +14,7 @@ export function ProjectTransitionPage() {
 }
 
 function SectionStart({ desc, forwardButtonContent }: Props) {
+
   return (
     <div className="startSection">
       <p className="startSection__desc">{desc}</p>
