@@ -74,6 +74,13 @@ function BuildingInformation() {
           <ToggleButton content="No" />,
         ]}
       />
+
+      <QnA
+        answers={[
+          <ToggleButton content="Next" />,
+          <ToggleButton content="Back" />,
+        ]}
+      />
     </div>
   );
 }
