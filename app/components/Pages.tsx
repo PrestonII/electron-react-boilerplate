@@ -19,7 +19,8 @@ export class PageWithPanel extends React.Component<IPanelPageProps> {
   }
 
   render() {
-    const { panel, children } = this.props;
+    const { children } = this.props;
+    const panel = this.props.panel ?? <Panel />;
 
     return (
       <div className={styles.pagePanel}>
