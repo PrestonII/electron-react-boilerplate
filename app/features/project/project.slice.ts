@@ -1,17 +1,34 @@
-import { createAction, createReducer, createSlice } from '@reduxjs/toolkit';
+import { Guid } from 'guid-typescript';
+import {
+  createAction,
+  createReducer,
+  createSlice,
+  PayloadAction,
+} from '@reduxjs/toolkit';
 // eslint-disable-next-line import/no-cycle
 import { AppThunk, RootState } from '../../store';
 import data from '../../data/data.project.initial';
+import { IProject } from './project.type';
 
 const projectSlice = createSlice({
   name: 'project',
   initialState: data,
   reducers: {
-    createNewProject: (state) => {
-      const now = new Date().toDateString();
-      state.dateCreated = now;
-      state.dateModified = now;
-      console.log(state);
+    createNewProject: {
+      reducer(state, action: PayloadAction<IProject>) {
+        console.log(state);
+      },
+      prepare(): PayloadAction<IProject> {
+        const now = new Date();
+        return {
+          type: 'project/createNewProject',
+          payload: {
+            id: Guid.create(),
+            dateCreated: now,
+            dateModified: now,
+          },
+        };
+      },
     },
     openProject: (state, action) => {
       console.log(state);
