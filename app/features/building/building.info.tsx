@@ -3,6 +3,7 @@ import { Button, TextField } from '@material-ui/core';
 import styles from './styles.building.info.scss';
 import ToggleButton from '../../components/ToggableButton';
 import QnA from '../../components/Question';
+import TextInputBox from '../../components/InputBox';
 
 function BuildingInformation() {
 
@@ -46,8 +47,7 @@ function BuildingInformation() {
       <QnA
         question={Q1}
         answers={[
-          <ToggleButton content="Imperial" />,
-          <ToggleButton content="Metric" />,
+          <TextInputBox className={styles.textinputbox} content="Please Tell Us Your Client's Name" />
         ]}
       />
 

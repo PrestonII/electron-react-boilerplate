@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ToggleButton from './ToggableButton';
-import styles from '../features/building/styles.building.info.scss';
+import styles, { textinputbox } from '../features/building/styles.building.info.scss';
 
 function QuestionAndAnswer(props: QnAProps) {
   const [answered, toggleAnswer] = useState(false);
