@@ -5,6 +5,7 @@ import ToggleButton from '../../components/ToggableButton';
 import QnA from '../../components/Question';
 import TextInputBox from '../../components/InputBox';
 
+
 function BuildingInformation() {
 
   const Q1 = (
@@ -38,51 +39,85 @@ function BuildingInformation() {
     </p>
   );
 
+  const Q5 = (
+    <p>
+      Does this program include any
+      <em> lab </em>
+      spaces?
+    </p>
+  );
+
+
+
   return (
     <div className={styles.page}>
-      <div className={styles.page__logo}> <h2>HLW</h2> </div>
+      <div className={styles.page__logo}>
+        <p>hlw</p>
+        <p>Program Dashboard</p>
+      </div>
       <div className={styles.page__title}>
         <h2>General Space Information</h2>
       </div>
       <div className={styles.page__content}>
-        <QnA
+        <QnA className={styles.page__content__one}
           question={Q1}
           answers={[
-            <TextInputBox className={styles.textinputbox} content="Please Tell Us Your Client's Name" />
+            <TextInputBox content="Please Tell Us Your Client's Name" />
           ]}
         />
+
+        <div>
+          -
+        </div>
 
         <QnA
           question={Q2}
           answers={[
-            <ToggleButton content="Imperial" />,
             <ToggleButton content="Metric" />,
+            <ToggleButton content="Imperial" />,
           ]}
         />
+
+        <div>
+          -
+        </div>
 
         <QnA
           question={Q3}
           answers={[
-            <ToggleButton content="Single" />,
             <ToggleButton content="Multi" />,
+            <ToggleButton content="Single" />,
           ]}
         />
+
+        <div>
+          -
+        </div>
 
         <QnA
           question={Q4}
           answers={[
-            <ToggleButton content="Yes" />,
             <ToggleButton content="No" />,
+            <ToggleButton content="Yes" />,
+          ]}
+        />
+
+        <div>
+          -
+        </div>
+
+        <QnA
+          question={Q5}
+          answers={[
+            <ToggleButton content="No" />,
+            <ToggleButton content="Yes" />,
           ]}
         />
       </div>
+
       <div className={styles.page__navigation}>
-        <QnA
-          answers={[
-            <ToggleButton content="Yes" />,
-            <ToggleButton content="No" />,
-          ]}
-        />
+        <button className={styles.Back}> BACK </button>
+        <button className={styles.Next}> NEXT </button>
       </div>
     </div>
   );

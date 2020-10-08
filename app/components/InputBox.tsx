@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
-import { TextField } from '@material-ui/core';
+import TextField, { TextFieldProps } from '@material-ui/core/TextField';
 
 function TextInputBox(props: TextInputBoxProps) {
 
   const { content } = props;
 
   return (
-    <TextField id="standard-basic" label={content} />
+    <TextField style={
+      {
+        width: "39rem",
+        backgroundColor: "white",
+        float: "right",
+        marginRight: "15rem",
+      }
+    } InputProps={{style: {color:"blue", fontSize: "2.4rem", fontWeight: "400"}}} id="standard-basic" label={content} />
   )
 }
 
