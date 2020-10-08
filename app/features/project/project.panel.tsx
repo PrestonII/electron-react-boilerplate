@@ -1,17 +1,17 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { Button } from '@material-ui/core';
 import styles from './project.panel.scss';
 import { Panel } from '../../components/Panels';
 import { createNewProject, openProject } from './project.slice';
 import { InternalNavigationalButton } from '../../components/NavigationalButtons';
 import routes from '../../constants/routes.json';
 
-export const ProjectOpenPanel = () => <Panel content={<OpenOptions />} />;
+export const ProjectOpenPanel = () => (
+  <Panel>
+    <OpenOptions />
+  </Panel>
+);
 
 function OpenOptions() {
-  const dispatch = useDispatch();
   const projectDetails = {
     id: 94615,
     name: 'The Project name',
