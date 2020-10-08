@@ -42,7 +42,9 @@ function TargetMetric () {
       <div className={styles.page__logo}>
         <p>hlw</p>
         <p>Program Dashboard</p>
-        <p>The Silmarillion Incorporated</p>
+        <div className={styles.page__logo__sub}>
+          <p>The Silmarillion Incorporated</p>
+        </div>
       </div>
 
       <div className={styles.page__title}>
