@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { selectProject } from '../features/project/project.slice';
 import { TransitionPage } from './TransitionPage';
 import { TransitionSection } from '../components/TransitionSection';
+import { BuildingInformationPanel } from '../components/BuildingInformationPanel';
 
 
 export function ProgramUpdatePage() {
@@ -11,7 +12,7 @@ export function ProgramUpdatePage() {
   const nextPage = '/project/workspace';
 
   return (
-    <TransitionPage>
+    <TransitionPage panel={<BuildingInformationPanel />}>
       <div className="page__header">
         <ProgramHeader />
       </div>
