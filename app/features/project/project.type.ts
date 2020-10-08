@@ -1,5 +1,3 @@
-import { Guid } from "guid-typescript";
-
 export interface IProject {
   id: string;
   name?: string;
@@ -11,4 +9,19 @@ export interface IProject {
   modifiedBy?: string;
   dateCreated: string;
   dateModified: string;
+}
+
+export interface INamedPerson {
+  id: string;
+  name?: string;
+  dateCreated: string;
+  dateModified: string;
+}
+
+export interface IClient extends INamedPerson {
+  company?: string;
+}
+
+export interface IUser extends INamedPerson {
+  company?: string;
 }
