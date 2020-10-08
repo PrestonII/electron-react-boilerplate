@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '@material-ui/core';
 import { TransitionPage } from './TransitionPage';
+import { BackButton } from '../components/NavigationalButtons';
 
 export function ProjectTransitionPage() {
   const desc = `Let's get more information about the project you're creating a program for`;
@@ -22,9 +23,7 @@ function SectionStart({ desc, forwardButtonContent }: Props) {
         <Button variant="outlined" color="primary">
           {forwardButtonContent}
         </Button>
-        <Button variant="outlined" color="primary">
-          Back
-        </Button>
+        <BackButton />
       </div>
     </div>
   );

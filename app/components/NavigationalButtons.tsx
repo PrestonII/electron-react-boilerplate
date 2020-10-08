@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 
 function InternalNavigationalButton({
@@ -22,10 +23,11 @@ function InternalNavigationalButton({
   );
 }
 
-// export function BackButton() {
+export function BackButton() {
+  const history = useHistory();
 
-//   return <InternalNavigationalButton content='Back' to={}/>
-// }
+  return <Button onClick={() => history.goBack()}>Back</Button>;
+}
 
 export type InternalNavBtnProps = {
   content: string;
