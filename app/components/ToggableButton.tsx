@@ -25,3 +25,9 @@ type ToggableButtonProps = {
 };
 
 export default ToggableButton;
+
+
+/*
+1. get the index of two buttons [0,1]
+2. IF 0's state is CLICKED - OK
+*/
