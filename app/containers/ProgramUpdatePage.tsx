@@ -16,7 +16,7 @@ export function ProgramUpdatePage() {
         <ProgramHeader />
       </div>
       <div className="page__info">
-
+        <ProgrammedSpaceDisplay />
       </div>
       <div className="page__nav">
         <TransitionSection
@@ -45,6 +45,12 @@ export function ProgramHeader() {
       </div>
     </div>
   );
+}
+
+export function ProgrammedSpaceDisplay() {
+  return (
+    <h1>Programmed Space</h1>
+  )
 }
 
 // interface HeaderInformation {
