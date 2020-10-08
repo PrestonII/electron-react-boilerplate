@@ -25,6 +25,7 @@ function OpenOptions() {
         onClick={() => {
           dispatch(createNewProject());
         }}
+        // href={routes.PROJECT}
       >
         <Link to={routes.PROJECT}>
           <h1>Create New</h1>
@@ -34,7 +35,7 @@ function OpenOptions() {
         className={styles.button__project}
         key="open"
         onClick={() => {
-          dispatch(openProject({ payload: projectDetails }));
+          dispatch(openProject(projectDetails));
         }}
       >
         <h1>Open Project</h1>
