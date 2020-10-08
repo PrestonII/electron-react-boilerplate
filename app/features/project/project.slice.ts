@@ -30,7 +30,7 @@ const projectSlice = createSlice({
         };
       },
     },
-    openProject: (state, action) => {
+    openProject: (state, action: PayloadAction<IProject>) => {
       console.log(state);
       console.log(action);
     },
