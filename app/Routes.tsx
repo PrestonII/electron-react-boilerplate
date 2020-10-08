@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import routes from './constants/routes.json';
 import App from './containers/App';
 import HomePage from './containers/HomePage';
+import { ProgramUpdatePage } from './containers/ProgramUpdatePage';
 // import BuildingInfoPage from './containers/BuildingInformationPage';
 import { ProjectTransitionPage } from './containers/ProjectTransitionPage';
 
@@ -27,7 +28,7 @@ export default function Routes() {
     <App>
       <Switch>
         <Route path={routes.COUNTER} component={CounterPage} />
-        {/* <Route path={routes.PROJECT} component={BuildingInfoPage} /> */}
+        <Route path={routes.PROGRAM.UPDATE} component={ProgramUpdatePage} />
         <Route path={routes.PROJECT} component={ProjectTransitionPage} />
         <Route path={routes.HOME} component={HomePage} />
       </Switch>

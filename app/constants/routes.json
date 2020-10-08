@@ -1,5 +1,9 @@
 {
   "HOME": "/",
   "COUNTER": "/counter",
-  "PROJECT": "/project"
+  "PROJECT": "/project",
+  "PROGRAM" : {
+    "START": "/program",
+    "UPDATE": "/program/update"
+  }
 }
