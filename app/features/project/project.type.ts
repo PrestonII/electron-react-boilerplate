@@ -1,7 +1,7 @@
 import { Guid } from "guid-typescript";
 
 export interface IProject {
-  id: Guid;
+  id: string;
   name?: string;
   tenancy?: number;
   isBroadcast?: boolean;
@@ -9,6 +9,6 @@ export interface IProject {
   client?: string;
   createdBy?: string;
   modifiedBy?: string;
-  dateCreated: Date;
-  dateModified: Date;
+  dateCreated: string;
+  dateModified: string;
 }

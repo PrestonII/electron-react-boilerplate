@@ -23,9 +23,9 @@ const projectSlice = createSlice({
         return {
           type: 'project/createNewProject',
           payload: {
-            id: Guid.create(),
-            dateCreated: now,
-            dateModified: now,
+            id: Guid.create().toString(),
+            dateCreated: now.toTimeString(),
+            dateModified: now.toTimeString(),
           },
         };
       },
