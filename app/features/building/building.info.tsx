@@ -118,8 +118,12 @@ function BuildingInformation() {
       </div>
 
       <div className={styles.page__navigation}>
-        <BackButton />
-        <DirectionalButton location={routes.INFO.SPATIAL} content="Next" />
+        <div className={styles.navBack}>
+          <BackButton />
+        </div>
+        <div className={styles.navNext}>
+          <DirectionalButton location={routes.INFO.SPATIAL} content="Next" />
+        </div>
       </div>
     </div>
   );

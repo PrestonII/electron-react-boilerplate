@@ -98,8 +98,12 @@ function TargetMetric () {
       </div>
 
       <div className={styles.page__navigation}>
-        <BackButton />
-        <DirectionalButton location={routes.HOME} content="Next" />
+        <div className={styles.navBack}>
+          <BackButton />
+        </div>
+        <div className={styles.navNext}>
+          <DirectionalButton location={routes.HOME} content="Next" />
+        </div>
       </div>
 
     </div>
