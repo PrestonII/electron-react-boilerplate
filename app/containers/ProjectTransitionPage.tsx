@@ -12,8 +12,24 @@ export function ProjectTransitionPage() {
       <TransitionSection
         desc={desc}
         forwardButtonContent={forward}
-        nextPage={routes.PROGRAM.UPDATE}
+        nextPage={routes.INFO.START}
       />
     </TransitionPage>
   );
 }
+
+export function GeneralInfoStartPage() {
+  const desc = `Let's get more information about the space you want to program`;
+  const forward = `Start General Information`;
+
+  return (
+    <TransitionPage>
+      <TransitionSection
+        desc={desc}
+        forwardButtonContent={forward}
+        nextPage={routes.INFO.GENERAL}
+      />
+    </TransitionPage>
+  );
+}
+
