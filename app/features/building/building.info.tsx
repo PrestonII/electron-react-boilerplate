@@ -4,6 +4,8 @@ import styles from './styles.building.info.scss';
 import ToggleButton from '../../components/ToggableButton';
 import QnA from '../../components/Question';
 import TextInputBox from '../../components/InputBox';
+import { DirectionalButton, BackButton } from '../../components/NavigationalButtons';
+import routes from '../../constants/routes.json';
 
 
 function BuildingInformation() {
@@ -116,8 +118,8 @@ function BuildingInformation() {
       </div>
 
       <div className={styles.page__navigation}>
-        <button className={styles.Back}> BACK </button>
-        <button className={styles.Next}> NEXT </button>
+        <BackButton />
+        <DirectionalButton location={routes.INFO.SPATIAL} content="Next" />
       </div>
     </div>
   );

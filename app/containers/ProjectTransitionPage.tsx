@@ -33,3 +33,19 @@ export function GeneralInfoStartPage() {
   );
 }
 
+
+export function GeneralSpatialInfoPage() {
+  const desc = `Now we'll gather information on general spatial requirements`;
+  const forward = `Start Building Constraints`;
+
+  return (
+    <TransitionPage>
+      <TransitionSection
+        desc={desc}
+        forwardButtonContent={forward}
+        nextPage={routes.INFO.CONSTRAINTS}
+      />
+    </TransitionPage>
+  );
+}
+
