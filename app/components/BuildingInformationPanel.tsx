@@ -33,5 +33,5 @@ export function BuildingInformationPanel() {
         </Collapse>
       </List>
     </Panel>
-  )
+  );
 }

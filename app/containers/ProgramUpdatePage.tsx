@@ -1,10 +1,9 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { selectProject } from '../features/project/project.slice';
-import { selectSetting } from '../features/settings/settings.slice';
+import { ProgramHeader } from '../components/ProgramHeader';
 import { TransitionPage } from './TransitionPage';
 import { TransitionSection } from '../components/TransitionSection';
 import { BuildingInformationPanel } from '../components/BuildingInformationPanel';
+import { ProgrammedSpaceDisplay } from '../components/SpaceDisplay';
 
 export function ProgramUpdatePage() {
   const desc = `Let's take a look at the open plan workspace requirements`;
@@ -29,34 +28,3 @@ export function ProgramUpdatePage() {
     </TransitionPage>
   );
 }
-
-export function ProgramHeader() {
-  const { client } = useSelector(selectProject);
-  const { application, company } = useSelector(selectSetting);
-
-  return (
-    <div className="header">
-      <div className="header__company">
-        <h1>{company}</h1>
-      </div>
-      <div className="header__program">
-        <h2>{application}</h2>
-      </div>
-      <div className="header__client">
-        <p className="header__client__name">{client}</p>
-      </div>
-    </div>
-  );
-}
-
-export function ProgrammedSpaceDisplay() {
-  return (
-    <h1>Programmed Space</h1>
-  )
-}
-
-// interface HeaderInformation {
-//   companyName: string;
-//   program: string;
-//   clientName: string;
-// };
