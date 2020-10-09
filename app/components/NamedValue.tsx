@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './NamedValue.style.scss';
 
-export const NamedValue = (props: NamedValueProps) => {
+export const NamedValue = (props: INamedValue) => {
   const { name, value } = props;
 
   return (
@@ -12,7 +12,7 @@ export const NamedValue = (props: NamedValueProps) => {
   );
 };
 
-export type NamedValueProps = {
+export interface INamedValue {
   name: string;
   value: string;
-};
+}
