@@ -1,10 +1,10 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useState } from 'react';
+import { List, ListItem } from '@material-ui/core';
 import { useSelector } from 'react-redux';
 import { selectProject } from '../features/project/project.slice';
 import { convertDataToINamedValues } from './NamedValue';
 import { PanelSection } from './PanelSection';
-import { PanelSectionList } from './PanelSectionList';
 import { Panel } from './Panels';
 
 export function BuildingInformationPanel() {
@@ -30,23 +30,32 @@ export function BuildingInformationPanel() {
 
   return (
     <Panel title={title}>
-      <PanelSectionList>
-        <PanelSection
-          handleClick={handleGeneral}
-          isActive={generalOpen}
-          sectionData={generalData}
-        />
-        <PanelSection
-          handleClick={handleForm}
-          isActive={formOpen}
-          sectionData={formData}
-        />
-        <PanelSection
-          handleClick={handleTotals}
-          isActive={totalsOpen}
-          sectionData={totalsData}
-        />
-      </PanelSectionList>
+      <List>
+        <ListItem>
+          <PanelSection
+            title="General Information"
+            handleClick={handleGeneral}
+            isActive={generalOpen}
+            sectionData={generalData}
+          />
+        </ListItem>
+        <ListItem>
+          <PanelSection
+            title="Basic Building Information"
+            handleClick={handleForm}
+            isActive={formOpen}
+            sectionData={formData}
+          />
+        </ListItem>
+        <ListItem>
+          <PanelSection
+            title="Programmed Space"
+            handleClick={handleTotals}
+            isActive={totalsOpen}
+            sectionData={totalsData}
+          />
+        </ListItem>
+      </List>
     </Panel>
   );
 }
