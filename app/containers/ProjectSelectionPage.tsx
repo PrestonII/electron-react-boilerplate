@@ -8,7 +8,6 @@ export default function ProjectSelectionPage() {
   return (
     <PageWithPanel panel={<ProjectOpenPanel />}>
       <RecentProjects />
-      {/* <ProjectExample /> */}
     </PageWithPanel>
   );
 }

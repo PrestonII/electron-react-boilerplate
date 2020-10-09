@@ -12,10 +12,10 @@ export interface IProject {
 }
 
 export interface INamedPerson {
-  id: string;
+  id?: string;
   name?: string;
-  dateCreated: string;
-  dateModified: string;
+  dateCreated?: string;
+  dateModified?: string;
 }
 
 export interface IClient extends INamedPerson {
@@ -23,5 +23,6 @@ export interface IClient extends INamedPerson {
 }
 
 export interface IUser extends INamedPerson {
-  company?: string;
+  email?: string;
+  department?: string;
 }

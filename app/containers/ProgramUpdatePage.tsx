@@ -1,10 +1,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { selectProject } from '../features/project/project.slice';
+import { selectSetting } from '../features/settings/settings.slice';
 import { TransitionPage } from './TransitionPage';
 import { TransitionSection } from '../components/TransitionSection';
 import { BuildingInformationPanel } from '../components/BuildingInformationPanel';
-
 
 export function ProgramUpdatePage() {
   const desc = `Let's take a look at the open plan workspace requirements`;
@@ -31,7 +31,8 @@ export function ProgramUpdatePage() {
 }
 
 export function ProgramHeader() {
-  const { application, client, company } = useSelector(selectProject);
+  const { client } = useSelector(selectProject);
+  const { application, company } = useSelector(selectSetting);
 
   return (
     <div className="header">

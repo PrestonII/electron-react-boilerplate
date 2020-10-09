@@ -1,4 +1,6 @@
 const APPDATA_INITIAL = {
+  company: 'hlw',
+  application: 'program generator',
   user: {
     name: '',
     email: '',
@@ -29,7 +31,6 @@ const APPDATA_INITIAL = {
       },
     ],
   },
-  settings: [],
 };
 
 export default APPDATA_INITIAL;

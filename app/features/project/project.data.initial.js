@@ -1,6 +1,4 @@
 const INITIAL_PROJECT_DATA = {
-  company: 'hlw',
-  application: 'program generator',
   client: '',
   name: '',
   dateCreated: '',

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import APPDATA from '../../data/data.app.initial';
+import APPDATA from '../settings/settings.data.initial';
 import styles from './project.scss';
 import { openProject } from './project.slice';
 import { NamedValue } from '../../components/NamedValue';
