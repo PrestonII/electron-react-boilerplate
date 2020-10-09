@@ -3,9 +3,13 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import routes from './constants/routes.json';
 import App from './containers/App';
+import GeneralBuildingConstraintPage from './containers/GeneralBuildingConstraint';
+import GeneralBuildingInfoPage from './containers/GeneralBuildingInfoPage';
 import HomePage from './containers/HomePage';
+import { ProgramUpdatePage } from './containers/ProgramUpdatePage';
 // import BuildingInfoPage from './containers/BuildingInformationPage';
-import { ProjectTransitionPage } from './containers/ProjectTransitionPage';
+import { GeneralInfoStartPage, GeneralSpatialInfoPage, ProjectTransitionPage } from './containers/ProjectTransitionPage';
+import TargetMetricPage from './containers/TargetMetricPage';
 
 // Lazily load routes and code split with webpack
 const LazyCounterPage = React.lazy(() =>
@@ -27,7 +31,11 @@ export default function Routes() {
     <App>
       <Switch>
         <Route path={routes.COUNTER} component={CounterPage} />
-        {/* <Route path={routes.PROJECT} component={BuildingInfoPage} /> */}
+        <Route path={routes.INFO.TARGETS} component={TargetMetricPage} />
+        <Route path={routes.INFO.CONSTRAINTS} component={GeneralBuildingConstraintPage} />
+        <Route path={routes.INFO.SPATIAL} component={GeneralSpatialInfoPage} />
+        <Route path={routes.INFO.GENERAL} component={GeneralBuildingInfoPage} />
+        <Route path={routes.INFO.START} component={GeneralInfoStartPage} />
         <Route path={routes.PROJECT} component={ProjectTransitionPage} />
         <Route path={routes.HOME} component={HomePage} />
       </Switch>

@@ -4,7 +4,7 @@ import styles from './panels.scss';
 
 export interface IPanelContent {
   title?: string;
-  content: JSX.Element;
+  children: React.ReactNode;
 }
 
 export class Panel extends React.Component<IPanelContent> {
@@ -14,12 +14,12 @@ export class Panel extends React.Component<IPanelContent> {
   };
 
   render() {
-    const { title, content } = this.props;
+    const { title, children } = this.props;
 
     return (
       <div className={styles.panel}>
         <div>{title}</div>
-        <div className={styles.panel__content}>{content}</div>
+        <div className={styles.panel__content}>{children}</div>
       </div>
     );
   }

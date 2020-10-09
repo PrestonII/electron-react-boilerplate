@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button } from '@material-ui/core';
 import { TransitionPage } from './TransitionPage';
-import { BackButton } from '../components/NavigationalButtons';
+import { TransitionSection } from '../components/TransitionSection';
+import routes from '../constants/routes.json';
 
 export function ProjectTransitionPage() {
   const desc = `Let's get more information about the project you're creating a program for`;
@@ -9,27 +9,43 @@ export function ProjectTransitionPage() {
 
   return (
     <TransitionPage>
-      <SectionStart desc={desc} forwardButtonContent={forward} />
+      <TransitionSection
+        desc={desc}
+        forwardButtonContent={forward}
+        nextPage={routes.INFO.START}
+      />
     </TransitionPage>
   );
 }
 
-function SectionStart({ desc, forwardButtonContent }: Props) {
+export function GeneralInfoStartPage() {
+  const desc = `Let's get more information about the space you want to program`;
+  const forward = `Start General Information`;
 
   return (
-    <div className="startSection">
-      <p className="startSection__desc">{desc}</p>
-      <div className="startSection__nav">
-        <Button variant="outlined" color="primary">
-          {forwardButtonContent}
-        </Button>
-        <BackButton />
-      </div>
-    </div>
+    <TransitionPage>
+      <TransitionSection
+        desc={desc}
+        forwardButtonContent={forward}
+        nextPage={routes.INFO.GENERAL}
+      />
+    </TransitionPage>
   );
 }
 
-type Props = {
-  desc: string;
-  forwardButtonContent: string;
-};
+
+export function GeneralSpatialInfoPage() {
+  const desc = `Now we'll gather information on general spatial requirements`;
+  const forward = `Start Building Constraints`;
+
+  return (
+    <TransitionPage>
+      <TransitionSection
+        desc={desc}
+        forwardButtonContent={forward}
+        nextPage={routes.INFO.CONSTRAINTS}
+      />
+    </TransitionPage>
+  );
+}
+

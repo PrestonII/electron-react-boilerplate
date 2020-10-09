@@ -1,13 +1,8 @@
 import { Guid } from 'guid-typescript';
-import {
-  createAction,
-  createReducer,
-  createSlice,
-  PayloadAction,
-} from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 // eslint-disable-next-line import/no-cycle
 import { AppThunk, RootState } from '../../store';
-import data from '../../data/data.project.initial';
+import data from './project.data.initial';
 import { IProject } from './project.type';
 
 const projectSlice = createSlice({

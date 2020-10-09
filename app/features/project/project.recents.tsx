@@ -1,19 +1,27 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import APPDATA from '../../data/data.app.initial';
+import APPDATA from '../settings/settings.data.initial';
 import styles from './project.scss';
 import { openProject } from './project.slice';
 import { NamedValue } from '../../components/NamedValue';
+import { selectSetting } from '../settings/settings.slice';
+import { IProject } from './project.type';
+
+function displayRecentProjects(projects: Array<IProject>) {
+  const recent = projects.map((p: IProject) => {
+    const name = p.name ?? '';
+
+    return <RecentProjectItem key={p.id} name={name} date={p.dateModified} />;
+  });
+
+  return recent;
+}
 
 export default function ProjectSelection() {
-  const dispatch = useDispatch();
-  // const value = useSelector();
+  const { projects } = useSelector(selectSetting);
 
-  const recentProjects = APPDATA.projects.recent;
-  const recent = recentProjects.map((p) => {
-    return <RecentProjectItem key={p.id} date={p.dateModified} {...p} />;
-  });
+  const recent = displayRecentProjects(projects.recent);
 
   return (
     <div className="project">

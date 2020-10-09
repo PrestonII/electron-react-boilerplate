@@ -16,6 +16,7 @@ module.exports = {
     'react/prefer-stateless-function': RULESTATE.WARN,
     'react/static-property-placement': RULESTATE.OFF,
     'prettier/prettier': RULESTATE.WARN,
+    'react/no-array-index-key': RULESTATE.WARN,
   },
   parserOptions: {
     ecmaVersion: 2020,
