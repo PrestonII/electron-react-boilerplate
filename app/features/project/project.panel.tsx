@@ -26,13 +26,13 @@ function OpenOptions() {
         to={routes.PROJECT}
         execute={createNewProject}
       />
-      <InternalNavigationalButton
+      {/* <InternalNavigationalButton
         className={styles.button__project}
         content="Open Project"
         to={routes.PROJECT}
         execute={openProject}
         executableData={projectDetails}
-      />
+      /> */}
     </div>
   );
 }
