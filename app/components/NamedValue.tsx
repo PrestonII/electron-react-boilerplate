@@ -16,3 +16,24 @@ export interface INamedValue {
   name: string;
   value: string;
 }
+
+export function convertDataToNamedValues(data: Record<string, string>) {
+  // const names = Object.getOwnPropertyNames(data);
+  const names = Object.keys(data);
+
+  const result = names.map((n, i) => (
+    <NamedValue key={i} name={n} value={data[n]} />
+  ));
+
+  return result;
+}
+
+export function convertDataToINamedValues(
+  data: Record<string, string>
+): Array<INamedValue> {
+  const names = Object.keys(data);
+
+  const result = names.map((n) => ({ name: n, value: data[n] }));
+
+  return result;
+}

@@ -3,27 +3,29 @@ const INITIAL_PROJECT_DATA = {
   name: '',
   dateCreated: '',
   dateModified: '',
-  general: {
-    units: '',
-    tenancy: '',
+  overview: {
+    general: {
+      units: '',
+      tenancy: '',
+    },
+    form: {
+      area_gross: '',
+      area_net: '',
+      floors: '',
+      factor_circulation: '',
+      factor_planning: '',
+    },
+    totals: {
+      total_offices: '',
+      total_open_workspaces: '',
+      total_meeting_spaces: '',
+      total_amenity_spaces: '',
+      total_support_spaces: '',
+      total_workseats: '',
+      ratio: '',
+    },
   },
-  form: {
-    area_gross: '',
-    area_net: '',
-    floors: '',
-    factor_circulation: '',
-    factor_planning: '',
-  },
-  program: {
-    total_offices: '',
-    total_open_workspaces: '',
-    total_meeting_spaces: '',
-    total_amenity_spaces: '',
-    total_support_spaces: '',
-    total_workseats: '',
-    ratio: '',
-  },
-  building: {
+  details: {
     enclosed_offices: [
       {
         name: '',
