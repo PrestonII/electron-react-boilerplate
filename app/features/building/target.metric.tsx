@@ -3,6 +3,8 @@ import { TextField } from '@material-ui/core';
 import QnA from '../../components/Question';
 import styles from './styles.target.metric.scss';
 import TextInputBox from '../../components/InputBox';
+import { DirectionalButton, BackButton } from '../../components/NavigationalButtons';
+import routes from '../../constants/routes.json';
 
 function TargetMetric () {
 
@@ -96,8 +98,8 @@ function TargetMetric () {
       </div>
 
       <div className={styles.page__navigation}>
-        <button className={styles.Back}> BACK </button>
-        <button className={styles.Next}> NEXT </button>
+        <BackButton />
+        <DirectionalButton location={routes.HOME} content="Next" />
       </div>
 
     </div>

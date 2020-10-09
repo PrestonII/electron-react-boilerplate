@@ -3,6 +3,8 @@ import { TextField } from '@material-ui/core';
 import QnA from '../../components/Question';
 import styles from './styles.building.constraint.scss';
 import TextInputBox from '../../components/InputBox';
+import { DirectionalButton, BackButton } from '../../components/NavigationalButtons';
+import routes from '../../constants/routes.json';
 
 function BuildingConstraint () {
 
@@ -74,8 +76,8 @@ function BuildingConstraint () {
       </div>
 
       <div className={styles.page__navigation}>
-        <button className={styles.Back}> BACK </button>
-        <button className={styles.Next}> NEXT </button>
+        <BackButton />
+        <DirectionalButton location={routes.INFO.TARGETS} content="Next" />
       </div>
     </div>
   );
