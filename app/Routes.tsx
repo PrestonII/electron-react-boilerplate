@@ -36,8 +36,8 @@ export default function Routes() {
         <Route path={routes.INFO.SPATIAL} component={GeneralSpatialInfoPage} />
         <Route path={routes.INFO.GENERAL} component={GeneralBuildingInfoPage} />
         <Route path={routes.INFO.START} component={GeneralInfoStartPage} />
-        {/* <Route path={routes.PROJECT} component={ProjectTransitionPage} /> */}
-        <Route path={routes.PROJECT} component={ProgramUpdatePage} />
+        <Route path={routes.PROJECT} component={ProjectTransitionPage} />
+        {/* <Route path={routes.PROJECT} component={ProgramUpdatePage} /> */}
         <Route path={routes.HOME} component={HomePage} />
       </Switch>
     </App>
