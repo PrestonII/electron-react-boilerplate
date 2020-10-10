@@ -10,7 +10,7 @@ export interface IPanelContent {
 export class Panel extends React.Component<IPanelContent> {
   static defaultProps = {
     title: 'Program Dashboard',
-    content: null
+    content: null,
   };
 
   render() {

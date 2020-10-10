@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint react/jsx-props-no-spreading: off */
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
@@ -7,7 +8,6 @@ import GeneralBuildingConstraintPage from './containers/GeneralBuildingConstrain
 import GeneralBuildingInfoPage from './containers/GeneralBuildingInfoPage';
 import HomePage from './containers/HomePage';
 import { ProgramUpdatePage } from './containers/ProgramUpdatePage';
-// import BuildingInfoPage from './containers/BuildingInformationPage';
 import { GeneralInfoStartPage, GeneralSpatialInfoPage, ProjectTransitionPage } from './containers/ProjectTransitionPage';
 import TargetMetricPage from './containers/TargetMetricPage';
 
@@ -37,6 +37,7 @@ export default function Routes() {
         <Route path={routes.INFO.GENERAL} component={GeneralBuildingInfoPage} />
         <Route path={routes.INFO.START} component={GeneralInfoStartPage} />
         <Route path={routes.PROJECT} component={ProjectTransitionPage} />
+        {/* <Route path={routes.PROJECT} component={ProgramUpdatePage} /> */}
         <Route path={routes.HOME} component={HomePage} />
       </Switch>
     </App>
