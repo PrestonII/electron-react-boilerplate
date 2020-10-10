@@ -7,6 +7,7 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import { INamedValue } from './NamedValue';
 import { buildPanelSectionItem } from './PanelSectionItem';
+import styles from './PanelSectionItem.scss';
 
 export interface IPanelSection {
   title: string;

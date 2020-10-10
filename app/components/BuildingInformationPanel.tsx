@@ -31,30 +31,24 @@ export function BuildingInformationPanel() {
   return (
     <Panel title={title}>
       <List>
-        <ListItem>
-          <PanelSection
-            title="General Information"
-            handleClick={handleGeneral}
-            isActive={generalOpen}
-            sectionData={generalData}
-          />
-        </ListItem>
-        <ListItem>
-          <PanelSection
-            title="Basic Building Information"
-            handleClick={handleForm}
-            isActive={formOpen}
-            sectionData={formData}
-          />
-        </ListItem>
-        <ListItem>
-          <PanelSection
-            title="Programmed Space"
-            handleClick={handleTotals}
-            isActive={totalsOpen}
-            sectionData={totalsData}
-          />
-        </ListItem>
+        <PanelSection
+          title="General Information"
+          handleClick={handleGeneral}
+          isActive={generalOpen}
+          sectionData={generalData}
+        />
+        <PanelSection
+          title="Basic Building Information"
+          handleClick={handleForm}
+          isActive={formOpen}
+          sectionData={formData}
+        />
+        <PanelSection
+          title="Programmed Space"
+          handleClick={handleTotals}
+          isActive={totalsOpen}
+          sectionData={totalsData}
+        />
       </List>
     </Panel>
   );
