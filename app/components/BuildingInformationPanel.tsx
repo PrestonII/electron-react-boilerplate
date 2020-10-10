@@ -1,6 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useState } from 'react';
-import { List, ListItem } from '@material-ui/core';
+import { List } from '@material-ui/core';
 import { useSelector } from 'react-redux';
 import { selectProject } from '../features/project/project.slice';
 import { convertDataToINamedValues } from './NamedValue';
